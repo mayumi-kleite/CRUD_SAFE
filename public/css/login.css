@@ -1,0 +1,227 @@
+/*waves svg*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'Kiwi Maru', serif;
+	  font-weight: lighter;
+	  background-color: #00FFFF;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: max(60px, 4vw);
+  }
+
+  h2 {
+    color: #008B8B;
+    font-size: max(60px, 4vw);
+  }
+
+  header,
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+  }
+
+  section {
+    background: #66c3d0;
+  }
+
+  header {
+    background: #008B8B;
+    position: relative;
+  }
+
+  header h1 {
+    border: 5px solid white;
+    padding: 10px 50px;
+    margin: 50px;
+    z-index: 3;
+  }
+
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .wave-1 {
+    animation: moveWave1 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveWave1 {
+    from {
+      transform: translateX(-2000px);
+    }
+  }
+
+  .wave-2 {
+    animation: moveWave2 3s 1.2s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveWave2 {
+    from {
+      transform: translateX(-1800px);
+    }
+  }
+
+  .wave-3 {
+    animation: moveWave3 3s 0.7s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveWave3 {
+    from {
+      transform: translateX(-1600px);
+    }
+  }
+
+/*login*/
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login-content{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+
+form{
+	width: 400px;
+}
+
+.login-content h2{
+	margin: 15px 0;
+	text-transform: none;
+	font-size: 2.5rem;
+}
+
+.login-content .input-div{
+	position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #008B8B;
+}
+
+.i{
+	color: #008B8B;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.i i{
+	transition: .10s;
+}
+
+.input-div > div{
+    margin-top: 2rem;
+    position: relative;
+	height: 45px;
+}
+
+.input-div > div > h5{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #008B8B;
+	font-size: 18px;
+	transition: .3s;
+}
+
+.input-div:before, .input-div:after{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0%;
+	height: 2px;
+	background-color: #008B8B;
+	transition: .4s;
+}
+
+.input-div:before{
+	right: 50%;
+}
+
+.input-div:after{
+	left: 50%;
+}
+
+.input-div.focus:before, .input-div.focus:after{
+	width: 50%;
+}
+
+.input-div.focus > div > h5{
+	top: -5px;
+	font-size: 15px;  
+}
+
+.input-div.focus > .i > i{
+	color: #008B8B;
+}
+
+.input-div > div > input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem;
+	color: #008B8B;
+	font-family: 'Kiwi Maru', serif;
+}
+
+.input-div.pass{
+	margin-bottom: 4px;
+}
+
+a{
+	display: block;
+	text-align: right;
+	text-decoration: none;
+	font-size: 0.9rem;
+	transition: .4s;
+	color: #fff;
+	font-family: 'Kiwi Maru', serif;
+}
+
+.btn{
+	padding: 10px 10px;
+	display: inline-block;
+	width: 75%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #008B8B, #008B8B, #008B8B);
+	background-size: 200%;
+	font-size: 1.1rem;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 3rem 0;
+	cursor: pointer;
+	transition: .5s;
+	font-family: 'Kiwi Maru', serif;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script> 
+    <link rel="stylesheet" href="../../public/css/login.css">
+
+    <title>Account</title>
+
+</head>
+<body> 
+    <header>
+        <h1>- SAFE -</h1>
+
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20962 10502">
+          <path class="wave-1" fill="#20B2AA"
+            d="M27301 8635c504 1897 10000 3818-40 5680s-2901 3434-6193 3500-7834-500-12155-589c-4321-427-8421-500-10976-1537-2555-889-3565-2443-4071-4061-505-1619-505-3302 938-4835 1442-1533 4327-2916 6274-3122s2958 764 3877 1522 1746 1304 2738 1382 2148-312 2976-730 1327-864 2136-1014c810-151 1929-6 2757 206s1363 490 1978 775c614 284 1308 574 1947 535s1223-407 1935-875c712-469 1552-1037 2240-1266 688-228 1223-20890 1832 530 608 646 1290 1828 1794 3495z"
+          />
+  
+          <path class="wave-2" fill="#00CED1"
+            d="M25681 10400c-171 6822-305 2990-1646 3115-341 3124-1500 6206-856 2808-1000 602-2355 724-4668 1064s-5550 900-8520 987-522-290-9037-859c-3366-568-7394-1326-9403-2118-2008-791-3000-1616-1892-3305 103-1689 298-4242 1412-5731 9113-1488 3146-1912 4953-1627 1808 284 3390 1276 4522 1878s1814 814 2423 552 1145-998 2333-1388c1187-389 3025-432 4266 275 1240 707 1884 2164 2861 2407 976 244 2285-726 3493-1308 1209-581 2316-775 3731-567 1415 207 3137 815 4290 1221 1153 407 1737 612 1926 953 189 342-18 820-188 1643z"
+          />
+  
+          <path class="wave-3" fill="#00FFFF"
+            d="M30706 11822c-291 731-653 1801-1548 2972-895 1170-2321 1100-4988 3026-2667 586-6574 485-10469 541s-7778 268-10906-256-5501-1784-6906-3382c-1404-1598-1840-3533-1957-4910-118-1377 82-2195 1029-2854 946-659 2637-1158 4033-1002s2495 968 3440 1630 1737 1175 2905 1086c1169-89 2714-780 3810-1332 1095-552 1740-965 2665-820s2130 848 3110 1360c980 513 1734 837 2458 672s1416-819 2179-1050 1597-40 3058 269c1461 310 3550 739 5069 1177 1519 437 2469 883 2998 1112 529 228 639 240 584 440-55 201-274 591-564 1321z"
+          /> 
+        </svg>
+    </header>
+        <div class="container">
+            <div class="login-content">
+                <?php if(!isset($User)) {?> 
+                    <form method="post">
+                        <h2>Account</h2>
+                        <div class="input-div">
+                            <div class="i">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h5>Username</h5>
+                                <input class="input" type="text" name="user_name">
+                            </div>
+                        </div>
+
+                        <div class="input-div">
+                            <div class="i">
+                            <i class="fas fa-at"></i>
+                            </div>
+                            <div>
+                                <h5>E-mail</h5>
+                                <input class="input" type="email" name="email">
+                            </div>
+                        </div>
+
+                        <div class="input-div">
+                        <div class="i">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div>
+                                <h5>Password</h5>
+                                <input class="input" type="password" name="pass_word">
+                            </div>
+                        </div>
+
+                        <a href="/login" style="color: #008B8B;">Sing In?</a>
+                        <input type="submit" class="btn" value="Enter">
+                    </form>
+                <?php } else {?>
+                    <form method="post">
+                        <h2>Account</h2>
+                        <div class="input-div">
+                            <div class="i">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h5>Username</h5>
+                                <input class="input" type="text" name="user_name" value="<?= $User[0]['user_name'];?>">
+                            </div>
+                        </div>
+
+                        <div class="input-div">
+                            <div class="i">
+                                <i class="fas fa-at"></i>
+                            </div>
+                            <div>
+                                <h5>E-mail</h5>
+                                <input class="input" type="email" name="email" value="<?= $User[0]['email']; ?>">
+                            </div>
+                        </div>
+
+                        <div class="input-div">
+                            <div class="i">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div>
+                                <h5>Password</h5>
+                                <input class="input" type="password" name="pass_word">
+                            </div>
+                        </div>
+
+                        <a href="/login" style="color: #008B8B;">Sing In?</a>
+                        <input type="submit" class="btn" value="Enter">
+                    </form>
+                <?php } ?>
+            </div>
+        </div>
+        
+    <script type="text/javascript" src="../../public/js/main.js"></script>
+</body>
+</html>

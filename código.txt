@@ -1,0 +1,20 @@
+public function accept($data = null) {
+        $db = Database::getInstance();
+
+        if(!isset($data['Name']) || !isset($data['Passaword']) || !isset($data['Email'])) {
+            return false;
+        }
+
+        if(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+            return false;
+        }
+        
+        $data = [ 
+            'user_name' => $data['Name'], 
+            'email' => $data['Email'], 
+            'pass_word' => password_hash($data['Password'], PASSWORD_BCRYPT, ["cost" => 10]),
+        ];
+
+        return $db->insert($this->table, $data);
+
+    }

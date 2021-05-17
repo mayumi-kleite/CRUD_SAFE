@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../../public/css/user.css">
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+
+  <title> Users </title>
+
+  <style>
+    body{
+      background-image: url(../img/wave.png);
+    }
+  </style>
+</head>
+<body> 
+    <header>
+        <nav>
+            <ul>
+              <li> 
+                <a href="#about"> About </a>
+              </li>
+              <li>
+                <a href="#Store"> Store </a>
+              </li>
+              <li>
+                <a href="#Help"> Help </a>
+              </li>
+              <li>
+                <a href="#contacts"> Contacts </a>
+              </li>
+              <li>
+                <a href="#buy"> <i class="fas fa-shopping-basket" style="font-size: 19.5px; color: #00ffff" > </i> </a>
+              </li>
+            </ul>
+          </nav>
+    </header>
+    <div class="container">
+      <img src="/public/img/Security.png">
+        <div class="card">
+          <div class="topcard">
+              <h2 class="title"> - User data - </h2>
+              <p class="secondtitle"> Check out </p>
+          </div>
+          <div class="icon"><i class="fas fa-check"></i></div>
+          <div class="bottomCard">
+            <?php foreach($Users as $User) { ?>
+              <p class="bottomTex"> UserName: <?= $User['user_name']; ?> </p>
+              <p class="bottomTex"> E-mail: <?= $User['email']; ?> </p>
+              <a class="btn" href="/user/except/<?= $User['id_User']; ?>"> Delete </a>
+              <a class="btn" href="/user/modify/<?= $User['id_User']; ?>"> Alterar </a>
+              <hr class="size">
+            <?php } ?>
+              <div class="actionCard">
+                <button class="action"> <i class="fas fa-heart"></i> </button>
+                <button class="action"> <i class="fas fa-share-alt"></i> </button>
+              </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

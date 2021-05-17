@@ -1,0 +1,214 @@
+body,html{
+    overflow-x: hidden; 
+    margin: 0;
+    font-family: 'Kiwi Maru', serif;
+}
+
+.parallax::after {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+}
+
+.header-site {
+    background-image: url(../img/both.png) ;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    padding-top: 170px;
+    padding-bottom: 315px;
+    width: 1349px;
+    height: 221px;
+}
+
+/**/
+
+ul{
+    margin: -9rem;
+    padding: 0 0 0 70VW;
+    display: flex;
+}
+
+li{
+    list-style-type: none;
+    margin: 0 1vw;
+    font-size: 18px;
+  }
+
+a{
+    text-decoration: none;
+    padding: 1vw;
+    color: white;
+    font-size: 19.5px;
+    font-weight: bolder;
+}
+
+nav{
+    width: 100vw;
+    background-color: transparent;
+}
+
+.title01{
+    font-size: 5rem;
+    color: #fff;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 20.5rem;
+}
+
+.title02{
+    font-size: 5rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.title03{
+    font-size: 5rem;
+    color: #000;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+/**/
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: -19vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.card{
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 2px 23px #999;
+    width: 350px;
+    margin: 0vh 15vh;
+} 
+
+.midia01{
+    background: url(../img/safe.svg) center/cover;
+    height: 200px;
+    width: 100%;
+}
+
+.midia02{
+    background: url(../img/letter.svg) center/cover;
+    height: 200px;
+    width: 97%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.midia03{
+    background: url(../img/factor_authentication.svg) center/cover;
+    height: 200px;
+    width: 93%;
+    margin-left: 10px;
+}
+
+.midia04{
+    background: url(../img/secure_server.svg) center/cover;
+    height: 200px;
+    width: 70%;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+.topcard{
+    padding: 5px;
+    padding-top: 0px;
+}
+
+.secondtitle{
+    color: #555;
+    text-align: center;
+}
+
+.bottomTex{
+    text-align: center;
+    color: #999;
+}
+
+.bottomCard{
+    padding: 10px;
+}
+
+.action{
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 17px;
+}
+
+.title{
+    text-align: center;
+    color: #00FFFF;
+}
+
+/**/
+
+.header-infor {
+    background-image: url(../img/Reading.svg) ;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 315px;
+    width: 1349px;
+    height: 350px;
+}
+
+/**/
+
+.footer{
+    background: #00FFFF;
+    padding: 10vh 0 0 0;
+    height: 400px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.text{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    padding: 10rem 0 0 1rem;
+}
+
+.hr{
+    color: #fff;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.hr::after {
+    content: '';
+    border-top: 1.5px solid #fff;
+    width: 60%;
+    position: absolute;
+    padding-top: 0rem;
+    left: 21%;
+}
